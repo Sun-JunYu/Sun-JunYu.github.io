@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sun-junyu.github.io/"/>
-  <updated>2020-04-23T05:32:17.000Z</updated>
+  <updated>2020-04-23T05:38:53.790Z</updated>
   <id>https://sun-junyu.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="https://sun-junyu.github.io/posts/79e097c4/"/>
     <id>https://sun-junyu.github.io/posts/79e097c4/</id>
     <published>2020-04-23T04:35:34.000Z</published>
-    <updated>2020-04-23T05:32:17.000Z</updated>
+    <updated>2020-04-23T05:38:53.790Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Django是什么？"><a href="#Django是什么？" class="headerlink" title="Django是什么？"></a>Django是什么？</h1><p>Django是一个开放源代码的Web应用框架，由Python写成。采用了MVT的软件设计模式，即模型，视图和模板。它在开发初期用于管理劳伦斯出版集团旗下的一些以新闻为主的网站。Django于2005年7月在BSD许可证下发布，它的名字来源于比利时的吉普赛爵士吉他手Django Reinhardt。</p><h1 id="为什么选择Django"><a href="#为什么选择Django" class="headerlink" title="为什么选择Django"></a>为什么选择Django</h1><p>使用Django，可以在几小时内将Web应用程序从概念带到启动。Django处理了许多Web开发的麻烦，因此可以专注于编写应用程序而无需重新发明轮子。并且它是免费和开源的。简单来说就是它速度快、可扩展性强。</p><h1 id="Django安装"><a href="#Django安装" class="headerlink" title="Django安装"></a>Django安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install django #安装最新Django</span><br><span class="line">pip install django&#x3D;&#x3D;2.0.4 #指定版本安装</span><br></pre></td></tr></table></figure><p>验证版本：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure><p><img src="http://q92ekyelb.bkt.clouddn.com/Django%E7%89%88%E6%9C%AC.png" alt="django版本"></p><h1 id="Django创建项目"><a href="#Django创建项目" class="headerlink" title="Django创建项目"></a>Django创建项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">生成django项目</span><br><span class="line"></span><br><span class="line">django-admin startproject 项目名</span><br><span class="line"></span><br><span class="line">生成django子应用</span><br><span class="line"></span><br><span class="line">python manage.py startapp 项目名</span><br><span class="line"></span><br><span class="line">启动django服务</span><br><span class="line"></span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><h1 id="settings-py配置文件的修改"><a href="#settings-py配置文件的修改" class="headerlink" title="settings.py配置文件的修改"></a>settings.py配置文件的修改</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">更改配置文件</span><br><span class="line"></span><br><span class="line">1.找到应用的settings.py</span><br><span class="line"></span><br><span class="line">2.注释MIDDLEWARE中的csr</span><br><span class="line"></span><br><span class="line">注册子应用</span><br><span class="line"></span><br><span class="line">INSTALLED_APPS&#x3D;[</span><br><span class="line"></span><br><span class="line">子应用名</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">修改数据库名：</span><br><span class="line"></span><br><span class="line">name&#x3D; 数据库名</span><br><span class="line"></span><br><span class="line">更改语言</span><br><span class="line"></span><br><span class="line">LANGUAGE &#x3D; &#39;zh-Hans&#39;</span><br><span class="line"></span><br><span class="line">更改时区</span><br><span class="line"></span><br><span class="line">TIME_ZOHE &#x3D; &#39;Asia&#x2F;Shanghai&#39;</span><br><span class="line"></span><br><span class="line">USE_TZ &#x3D; False</span><br><span class="line"></span><br><span class="line">添加静态文件夹：   在配置文件最后</span><br><span class="line"></span><br><span class="line">STATICFILES_DIRS &#x3D; [so.path.join(BASE_DIR,&#39;static&#39;)]</span><br></pre></td></tr></table></figure><h1 id="迁移以及迁移失败的解决方法"><a href="#迁移以及迁移失败的解决方法" class="headerlink" title="迁移以及迁移失败的解决方法"></a>迁移以及迁移失败的解决方法</h1><p>生成迁移文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br></pre></td></tr></table></figure><p>执行迁移</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure><p>若执行迁移不成功，就删除migrations文件夹和对应数据库的所有表，重新执行上面的两条命令。</p><p>若还不成功就在数据库手动建表，反向迁移</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py inspectdb &gt; 应用名称&#x2F;models.py</span><br></pre></td></tr></table></figure><h1 id="Django-注册小案例"><a href="#Django-注册小案例" class="headerlink" title="Django 注册小案例"></a>Django 注册小案例</h1><p>##注册逻辑：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 注册接口</span><br><span class="line">class Register(APIView):</span><br><span class="line"></span><br><span class="line">    def get(self,request):</span><br><span class="line"></span><br><span class="line">        # 接收参数</span><br><span class="line">        username &#x3D; request.GET.get(&#39;username&#39;,None)</span><br><span class="line">        password &#x3D; request.GET.get(&#39;password&#39;,None)</span><br><span class="line"></span><br><span class="line">        # 排重操作</span><br><span class="line">        user &#x3D; User.objects.filter(username&#x3D;username).first()</span><br><span class="line"></span><br><span class="line">        if user:</span><br><span class="line">            return Response(&#123;&#39;code&#39;:403,&#39;message&#39;:&#39;该用户名已存在&#39;&#125;)</span><br><span class="line"></span><br><span class="line">        # 入库</span><br><span class="line">        user &#x3D; User(username &#x3D; username,password &#x3D; make_password(password))</span><br><span class="line"></span><br><span class="line">        # 保存结果</span><br><span class="line">        user.save()</span><br><span class="line"></span><br><span class="line">        return Response(&#123;&#39;code&#39;:200,&#39;message&#39;:&#39;恭喜注册成功&#39;&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Django是什么？"><a href="#Django是什么？" class="headerlink" title="Django是什么？"></a>Django是什么？</h1><p>Django是一个开放源代码的Web应用框架，由Python写成。采用了MVT的软件设计模式，即模型，视图和模板。它在开发初期用于管理劳伦斯出版集团旗下的一些以新闻为主的网站。Django于2005年7月在BSD许可证下发布，它的名字来源于比利时的吉普赛爵士吉他手Django Reinhardt。</p><a id="more"></a><h1 id="为什么选择Django"><a href="#为什么选择Django" class="headerlink" title="为什么选择Django"></a>为什么选择Django</h1><p>使用Django，可以在几小时内将Web应用程序从概念带到启动。Django处理了许多Web开发的麻烦，因此可以专注于编写应用程序而无需重新发明轮子。并且它是免费和开源的。简单来说就是它速度快、可扩展性强。</p><h1 id="Django安装"><a href="#Django安装" class="headerlink" title="Django安装"></a>Django安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install django #安装最新Django</span><br><span class="line">pip install django&#x3D;&#x3D;2.0.4 #指定版本安装</span><br></pre></td></tr></table></figure><p>验证版本：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure><p><img src="http://q92ekyelb.bkt.clouddn.com/Django%E7%89%88%E6%9C%AC.png" alt="django版本"></p><h1 id="Django创建项目"><a href="#Django创建项目" class="headerlink" title="Django创建项目"></a>Django创建项目</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">生成django项目</span><br><span class="line"></span><br><span class="line">django-admin startproject 项目名</span><br><span class="line"></span><br><span class="line">生成django子应用</span><br><span class="line"></span><br><span class="line">python manage.py startapp 项目名</span><br><span class="line"></span><br><span class="line">启动django服务</span><br><span class="line"></span><br><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><h1 id="settings-py配置文件的修改"><a href="#settings-py配置文件的修改" class="headerlink" title="settings.py配置文件的修改"></a>settings.py配置文件的修改</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">更改配置文件</span><br><span class="line"></span><br><span class="line">1.找到应用的settings.py</span><br><span class="line"></span><br><span class="line">2.注释MIDDLEWARE中的csr</span><br><span class="line"></span><br><span class="line">注册子应用</span><br><span class="line"></span><br><span class="line">INSTALLED_APPS&#x3D;[</span><br><span class="line"></span><br><span class="line">子应用名</span><br><span class="line"></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">修改数据库名：</span><br><span class="line"></span><br><span class="line">name&#x3D; 数据库名</span><br><span class="line"></span><br><span class="line">更改语言</span><br><span class="line"></span><br><span class="line">LANGUAGE &#x3D; &#39;zh-Hans&#39;</span><br><span class="line"></span><br><span class="line">更改时区</span><br><span class="line"></span><br><span class="line">TIME_ZOHE &#x3D; &#39;Asia&#x2F;Shanghai&#39;</span><br><span class="line"></span><br><span class="line">USE_TZ &#x3D; False</span><br><span class="line"></span><br><span class="line">添加静态文件夹：   在配置文件最后</span><br><span class="line"></span><br><span class="line">STATICFILES_DIRS &#x3D; [so.path.join(BASE_DIR,&#39;static&#39;)]</span><br></pre></td></tr></table></figure><h1 id="迁移以及迁移失败的解决方法"><a href="#迁移以及迁移失败的解决方法" class="headerlink" title="迁移以及迁移失败的解决方法"></a>迁移以及迁移失败的解决方法</h1><p>生成迁移文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br></pre></td></tr></table></figure><p>执行迁移</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure><p>若执行迁移不成功，就删除migrations文件夹和对应数据库的所有表，重新执行上面的两条命令。</p><p>若还不成功就在数据库手动建表，反向迁移</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py inspectdb &gt; 应用名称&#x2F;models.py</span><br></pre></td></tr></table></figure><h1 id="Django-注册小案例"><a href="#Django-注册小案例" class="headerlink" title="Django 注册小案例"></a>Django 注册小案例</h1><p>##注册逻辑：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 注册接口</span><br><span class="line">class Register(APIView):</span><br><span class="line"></span><br><span class="line">    def get(self,request):</span><br><span class="line"></span><br><span class="line">        # 接收参数</span><br><span class="line">        username &#x3D; request.GET.get(&#39;username&#39;,None)</span><br><span class="line">        password &#x3D; request.GET.get(&#39;password&#39;,None)</span><br><span class="line"></span><br><span class="line">        # 排重操作</span><br><span class="line">        user &#x3D; User.objects.filter(username&#x3D;username).first()</span><br><span class="line"></span><br><span class="line">        if user:</span><br><span class="line">            return Response(&#123;&#39;code&#39;:403,&#39;message&#39;:&#39;该用户名已存在&#39;&#125;)</span><br><span class="line"></span><br><span class="line">        # 入库</span><br><span class="line">        user &#x3D; User(username &#x3D; username,password &#x3D; make_password(password))</span><br><span class="line"></span><br><span class="line">        # 保存结果</span><br><span class="line">        user.save()</span><br><span class="line"></span><br><span class="line">        return Response(&#123;&#39;code&#39;:200,&#39;message&#39;:&#39;恭喜注册成功&#39;&#125;)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;Django是什么？&quot;&gt;&lt;a href=&quot;#Django是什么？&quot; class=&quot;headerlink&quot; title=&quot;Django是什么？&quot;&gt;&lt;/a&gt;Django是什么？&lt;/h1&gt;&lt;p&gt;Django是一个开放源代码的Web应用框架，由Python写成。采用了MV
-      
+      &lt;h1 id=&quot;Django是什么？&quot;&gt;&lt;a href=&quot;#Django是什么？&quot; class=&quot;headerlink&quot; title=&quot;Django是什么？&quot;&gt;&lt;/a&gt;Django是什么？&lt;/h1&gt;&lt;p&gt;Django是一个开放源代码的Web应用框架，由Python写成。采用了MVT的软件设计模式，即模型，视图和模板。它在开发初期用于管理劳伦斯出版集团旗下的一些以新闻为主的网站。Django于2005年7月在BSD许可证下发布，它的名字来源于比利时的吉普赛爵士吉他手Django Reinhardt。&lt;/p&gt;
     
     </summary>
     
@@ -39,25 +36,6 @@
     
     
       <category term="django" scheme="https://Sun-JunYu.github.io/tags/django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://sun-junyu.github.io/posts/4a17b156/"/>
-    <id>https://sun-junyu.github.io/posts/4a17b156/</id>
-    <published>2020-04-21T10:43:15.696Z</published>
-    <updated>2020-04-22T05:46:03.722Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
@@ -112,29 +90,6 @@
   </entry>
   
   <entry>
-    <title>git的基本操作</title>
-    <link href="https://sun-junyu.github.io/posts/7eb35566/"/>
-    <id>https://sun-junyu.github.io/posts/7eb35566/</id>
-    <published>2020-03-04T16:00:00.000Z</published>
-    <updated>2020-04-22T03:06:15.816Z</updated>
-    
-    <content type="html"><![CDATA[<p>git init    #初始化<br>git pull     # 从远程仓库拉到本地<br>git remote add origin  <a href="https://gitee.com/privatecloud-1/privatecloud.git">https://gitee.com/privatecloud-1/privatecloud.git</a>  #  连接远程仓库<br>git checkout zyj   #切换分支</p><a id="more"></a><p>git add -A dashixun  #上传文件<br>git commit -m ‘1231’   # 备注<br>git push  #提交<br>git clone -b “分支名字”</p><h3 id="备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到"><a href="#备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到" class="headerlink" title="备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)"></a>备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)</h3><p>插入如下代码使项目中的组员每次修改数据都要输入账号和密码：</p><ul><li>git config –global user.name [username]</li><li>git config –global user.password [userpassword]</li><li>PS：想要保存密码，则需要插入如下代码： git config –global credential.helper store。</li></ul><p>常用操作<br><a href="https://www.cnblogs.com/chenhuichao/p/9631754.html">https://www.cnblogs.com/chenhuichao/p/9631754.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;git init    #初始化&lt;br&gt;git pull     # 从远程仓库拉到本地&lt;br&gt;git remote add origin  &lt;a href=&quot;https://gitee.com/privatecloud-1/privatecloud.git&quot;&gt;https://gitee.com/privatecloud-1/privatecloud.git&lt;/a&gt;  #  连接远程仓库&lt;br&gt;git checkout zyj   #切换分支&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="git" scheme="https://Sun-JunYu.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="https://Sun-JunYu.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>三方登录</title>
     <link href="https://sun-junyu.github.io/posts/b9330e24/"/>
     <id>https://sun-junyu.github.io/posts/b9330e24/</id>
@@ -162,6 +117,29 @@
   </entry>
   
   <entry>
+    <title>git的基本操作</title>
+    <link href="https://sun-junyu.github.io/posts/7eb35566/"/>
+    <id>https://sun-junyu.github.io/posts/7eb35566/</id>
+    <published>2020-03-04T16:00:00.000Z</published>
+    <updated>2020-04-22T03:06:15.816Z</updated>
+    
+    <content type="html"><![CDATA[<p>git init    #初始化<br>git pull     # 从远程仓库拉到本地<br>git remote add origin  <a href="https://gitee.com/privatecloud-1/privatecloud.git">https://gitee.com/privatecloud-1/privatecloud.git</a>  #  连接远程仓库<br>git checkout zyj   #切换分支</p><a id="more"></a><p>git add -A dashixun  #上传文件<br>git commit -m ‘1231’   # 备注<br>git push  #提交<br>git clone -b “分支名字”</p><h3 id="备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到"><a href="#备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到" class="headerlink" title="备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)"></a>备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)</h3><p>插入如下代码使项目中的组员每次修改数据都要输入账号和密码：</p><ul><li>git config –global user.name [username]</li><li>git config –global user.password [userpassword]</li><li>PS：想要保存密码，则需要插入如下代码： git config –global credential.helper store。</li></ul><p>常用操作<br><a href="https://www.cnblogs.com/chenhuichao/p/9631754.html">https://www.cnblogs.com/chenhuichao/p/9631754.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;git init    #初始化&lt;br&gt;git pull     # 从远程仓库拉到本地&lt;br&gt;git remote add origin  &lt;a href=&quot;https://gitee.com/privatecloud-1/privatecloud.git&quot;&gt;https://gitee.com/privatecloud-1/privatecloud.git&lt;/a&gt;  #  连接远程仓库&lt;br&gt;git checkout zyj   #切换分支&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://Sun-JunYu.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://Sun-JunYu.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python的数据结构</title>
     <link href="https://sun-junyu.github.io/posts/2ff1809f/"/>
     <id>https://sun-junyu.github.io/posts/2ff1809f/</id>
@@ -174,6 +152,29 @@
     
       &lt;h1 id=&quot;关于数据结构&quot;&gt;&lt;a href=&quot;#关于数据结构&quot; class=&quot;headerlink&quot; title=&quot;关于数据结构&quot;&gt;&lt;/a&gt;关于数据结构&lt;/h1&gt;&lt;p&gt;什么是数据结构？&lt;/p&gt;
 &lt;p&gt;简单地说，数据结构是以某种特定的布局方式存储数据的容器。这种“布局方式”决定了数据结构对于某些操作是高效的，而对于其他操作则是低效的。首先我们需要理解各种数据结构，才能在处理实际问题时选取最合适的数据结构。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://Sun-JunYu.github.io/categories/python/"/>
+    
+    
+      <category term="python基础" scheme="https://Sun-JunYu.github.io/tags/python%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python内置的内存管理机制</title>
+    <link href="https://sun-junyu.github.io/posts/89986499/"/>
+    <id>https://sun-junyu.github.io/posts/89986499/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2020-04-21T06:11:37.104Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Python中是如何管理内存的<br>Python有一个私有堆空间来保存所有的对象和数据结构。作为开发者，我们无法访问它，是解释器在管理它。但是有了核心API后，我们可以访问一些工具。Python内存管理器控制内存分配。</p><a id="more"></a><p>另外，内置垃圾回收器会回收使用所有的未使用内存，所以使其适用于堆空间。</p><p>一、垃圾回收：python不像C++，Java等语言一样，他们可以不用事先声明变量类型而直接对变量进行赋值。对Python语言来讲，对象的类型和内存都是在运行时确定的。这也是为什么我们称Python语言为动态类型的原因(这里我们把动态类型可以简单的归结为对变量内存地址的分配是在运行时自动判断变量类型并对变量进行赋值)。</p><p>二、引用计数：Python采用了类似Windows内核对象一样的方式来对内存进行管理。每一个对象，都维护这一个对指向该对对象的引用的计数。当变量被绑定在一个对象上的时候，该变量的引用计数就是1，(还有另外一些情况也会导致变量引用计数的增加),系统会自动维护这些标签，并定时扫描，当某标签的引用计数变为0的时候，该对就会被回收。</p><p>1 对象存储</p><p>在Python中万物皆对象</p><p>不存在基本数据类型，0, 1.2, True, False, “abc”等，这些全都是对象</p><p>所有对象, 都会在内存中开辟一块空间进行存储</p><p>2.1 会根据不同的类型以及内容, 开辟不同的空间大小进行存储 2.2 返回该空间的地址给外界接收(称为”引用”), 用于后续对这个对象的操作 2.3 可通过 id() 函数获取内存地址(10进制) 2.4 通过 hex() 函数可以查看对应的16进制地址</p><p>class Person:<br>    pass</p><p>p = Person()<br>print(p)<br>print(id(p))<br>print(hex(id(p)))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>&lt;<strong>main</strong>.Person object at 0x107030470&gt;<br>4412605552<br>0x107030470<br>对于整数和短小的字符, Python会进行缓存; 不会创建多个相同对象</p><p>此时, 被多次赋值, 只会有多份引用</p><p>num1 = 2<br>num2 = 2<br>print(id(num1), id(num2))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>4366584464 4366584464<br>容器对象, 存储的其他对象, 仅仅是其他对象的引用, 并不是其他对象本身</p><p>4.1 比如字典, 列表, 元组这些”容器对象” 4.2 全局变量是由一个大字典进行引用 4.3 可通过 global() 查看</p><p>2 对象回收 2.1 引用计数器 2.1.1概念</p><p>一个对象, 会记录着自身被引用的个数 每增加一个引用, 这个对象的引用计数会自动+1 每减少一个引用, 这个对象的引用计数会自动-1</p><p>引用计数+1场景</p><p>1、对象被创建<br>    p1 = Person()<br>2、对象被引用<br>    p2 = p1<br>3、对象被作为参数，传入到一个函数中<br>    log(p1)<br>    这里注意会+2, 因为内部有两个属性引用着这个参数<br>4、对象作为一个元素，存储在容器中<br>    l = [p1]<br>引用计数-1场景</p><p>1、对象的别名被显式销毁<br>    del p1<br>2、对象的别名被赋予新的对象<br>    p1 = 123<br>3、一个对象离开它的作用域<br>    一个函数执行完毕时<br>    内部的局部变量关联的对象, 它的引用计数就会-1<br>4、对象所在的容器被销毁，或从容器中删除对象<br>查看引用计数</p><p>import sys</p><p>class Person:<br>    pass</p><p>p1 = Person() # 1</p><p>print(sys.getrefcount(p1)) # 2</p><p>p2 = p1 # 2</p><p>print(sys.getrefcount(p1)) # 3</p><p>del p2 # 1<br>print(sys.getrefcount(p1)) # 2</p><p>del p1<br>print(sys.getrefcount(p1)) #error，因为上一行代码执行类p1对象已经销毁</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>2<br>3<br>2<br>循环引用</p><p>循环引用<br>class Person:<br>    pass</p><p>class Dog:<br>    pass</p><p>p = Person()<br>d = Dog()   </p><p>p.pet = d<br>d.master = p<br>对象间互相引用，导致对象不能通过引用计数器进行销毁</p><p>手动触发垃圾回收，挥手循环引用</p><p>import objgraph<br>import gc</p><p>class Person:<br>    pass</p><p>class Dog:<br>    pass</p><p>p = Person()<br>d = Dog()</p><p>p.pet = d<br>d.master = p</p><p>del p<br>del d</p><p>gc.collect() #手动触发垃圾回收</p><p>print(objgraph.count(“Person”))<br>print(objgraph.count(“Dog”))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果<br>0<br>0</p></blockquote></blockquote></blockquote></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Python中是如何管理内存的&lt;br&gt;Python有一个私有堆空间来保存所有的对象和数据结构。作为开发者，我们无法访问它，是解释器在管理它。但是有了核心API后，我们可以访问一些工具。Python内存管理器控制内存分配。&lt;/p&gt;
     
     </summary>
     
@@ -213,29 +214,6 @@
       <category term="vue" scheme="https://Sun-JunYu.github.io/tags/vue/"/>
     
       <category term="七牛云" scheme="https://Sun-JunYu.github.io/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python内置的内存管理机制</title>
-    <link href="https://sun-junyu.github.io/posts/89986499/"/>
-    <id>https://sun-junyu.github.io/posts/89986499/</id>
-    <published>2020-02-22T16:00:00.000Z</published>
-    <updated>2020-04-21T06:11:37.104Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Python中是如何管理内存的<br>Python有一个私有堆空间来保存所有的对象和数据结构。作为开发者，我们无法访问它，是解释器在管理它。但是有了核心API后，我们可以访问一些工具。Python内存管理器控制内存分配。</p><a id="more"></a><p>另外，内置垃圾回收器会回收使用所有的未使用内存，所以使其适用于堆空间。</p><p>一、垃圾回收：python不像C++，Java等语言一样，他们可以不用事先声明变量类型而直接对变量进行赋值。对Python语言来讲，对象的类型和内存都是在运行时确定的。这也是为什么我们称Python语言为动态类型的原因(这里我们把动态类型可以简单的归结为对变量内存地址的分配是在运行时自动判断变量类型并对变量进行赋值)。</p><p>二、引用计数：Python采用了类似Windows内核对象一样的方式来对内存进行管理。每一个对象，都维护这一个对指向该对对象的引用的计数。当变量被绑定在一个对象上的时候，该变量的引用计数就是1，(还有另外一些情况也会导致变量引用计数的增加),系统会自动维护这些标签，并定时扫描，当某标签的引用计数变为0的时候，该对就会被回收。</p><p>1 对象存储</p><p>在Python中万物皆对象</p><p>不存在基本数据类型，0, 1.2, True, False, “abc”等，这些全都是对象</p><p>所有对象, 都会在内存中开辟一块空间进行存储</p><p>2.1 会根据不同的类型以及内容, 开辟不同的空间大小进行存储 2.2 返回该空间的地址给外界接收(称为”引用”), 用于后续对这个对象的操作 2.3 可通过 id() 函数获取内存地址(10进制) 2.4 通过 hex() 函数可以查看对应的16进制地址</p><p>class Person:<br>    pass</p><p>p = Person()<br>print(p)<br>print(id(p))<br>print(hex(id(p)))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>&lt;<strong>main</strong>.Person object at 0x107030470&gt;<br>4412605552<br>0x107030470<br>对于整数和短小的字符, Python会进行缓存; 不会创建多个相同对象</p><p>此时, 被多次赋值, 只会有多份引用</p><p>num1 = 2<br>num2 = 2<br>print(id(num1), id(num2))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>4366584464 4366584464<br>容器对象, 存储的其他对象, 仅仅是其他对象的引用, 并不是其他对象本身</p><p>4.1 比如字典, 列表, 元组这些”容器对象” 4.2 全局变量是由一个大字典进行引用 4.3 可通过 global() 查看</p><p>2 对象回收 2.1 引用计数器 2.1.1概念</p><p>一个对象, 会记录着自身被引用的个数 每增加一个引用, 这个对象的引用计数会自动+1 每减少一个引用, 这个对象的引用计数会自动-1</p><p>引用计数+1场景</p><p>1、对象被创建<br>    p1 = Person()<br>2、对象被引用<br>    p2 = p1<br>3、对象被作为参数，传入到一个函数中<br>    log(p1)<br>    这里注意会+2, 因为内部有两个属性引用着这个参数<br>4、对象作为一个元素，存储在容器中<br>    l = [p1]<br>引用计数-1场景</p><p>1、对象的别名被显式销毁<br>    del p1<br>2、对象的别名被赋予新的对象<br>    p1 = 123<br>3、一个对象离开它的作用域<br>    一个函数执行完毕时<br>    内部的局部变量关联的对象, 它的引用计数就会-1<br>4、对象所在的容器被销毁，或从容器中删除对象<br>查看引用计数</p><p>import sys</p><p>class Person:<br>    pass</p><p>p1 = Person() # 1</p><p>print(sys.getrefcount(p1)) # 2</p><p>p2 = p1 # 2</p><p>print(sys.getrefcount(p1)) # 3</p><p>del p2 # 1<br>print(sys.getrefcount(p1)) # 2</p><p>del p1<br>print(sys.getrefcount(p1)) #error，因为上一行代码执行类p1对象已经销毁</p><blockquote><blockquote><blockquote><blockquote><p>打印结果</p></blockquote></blockquote></blockquote></blockquote><p>2<br>3<br>2<br>循环引用</p><p>循环引用<br>class Person:<br>    pass</p><p>class Dog:<br>    pass</p><p>p = Person()<br>d = Dog()   </p><p>p.pet = d<br>d.master = p<br>对象间互相引用，导致对象不能通过引用计数器进行销毁</p><p>手动触发垃圾回收，挥手循环引用</p><p>import objgraph<br>import gc</p><p>class Person:<br>    pass</p><p>class Dog:<br>    pass</p><p>p = Person()<br>d = Dog()</p><p>p.pet = d<br>d.master = p</p><p>del p<br>del d</p><p>gc.collect() #手动触发垃圾回收</p><p>print(objgraph.count(“Person”))<br>print(objgraph.count(“Dog”))</p><blockquote><blockquote><blockquote><blockquote><p>打印结果<br>0<br>0</p></blockquote></blockquote></blockquote></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在Python中是如何管理内存的&lt;br&gt;Python有一个私有堆空间来保存所有的对象和数据结构。作为开发者，我们无法访问它，是解释器在管理它。但是有了核心API后，我们可以访问一些工具。Python内存管理器控制内存分配。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://Sun-JunYu.github.io/categories/python/"/>
-    
-    
-      <category term="python基础" scheme="https://Sun-JunYu.github.io/tags/python%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
