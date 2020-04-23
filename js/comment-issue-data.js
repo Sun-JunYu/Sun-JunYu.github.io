@@ -1,8 +1,8 @@
 // 评论issues仓库 by.removeif https://removeif.github.io/
 var repoIssuesUrl = "https://api.github.com/repos/removeif/blog_comment/issues";
 // 对应仓库 clientId、clientSecret 关于这两个参数的安全问题，查看 https://removeif.github.io/2019/09/19/博客源码分享.html#1-热门推荐，最新评论：
-var clientId = "Iv1.07b3daf43a7c754c";
-var clientSecret = "7cde7de258b5783b64611061f585eb02402b4ee7";
+var clientId = "fdde0a08ff8a1aa424a1";
+var clientSecret = "7db7f7776e49fd7398aa0ce51caa9153b45597a5";
 var authorizationToken = 'Basic ' + btoa(clientId + ':' + clientSecret);
 // 写comment count值
 var reqCommentCountUrl = repoIssuesUrl + "?t=" + new Date().getTime() + "&labels=Gitalk,";
@@ -10,7 +10,7 @@ var reqCommentCountUrl = repoIssuesUrl + "?t=" + new Date().getTime() + "&labels
 var COMMENT_CACHE_KEY = "commentKey";
 
 // 管理员名称,评论时添加 [博主] 后缀
-var ADMIN_NAME = "removeif";
+var ADMIN_NAME = "Sun-JunYu";
 
 function ajaxReqForGitHub(url,call) {
     $.ajax({
